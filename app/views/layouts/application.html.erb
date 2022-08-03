@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>MyMagaz1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+</head>
+
+<body>
+<nav>
+  <ul>
+    <li><%= link_to 'Домой', root_path %></li>
+    <li><%= link_to 'Questions', questions_path %></li>
+  </ul>
+</nav>
+<main>
+  <%= yield %>
+</main>
+</body>
+</html>

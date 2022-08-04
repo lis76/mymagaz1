@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :questions
+  resources :questions do
+    resources :answers, only: %i[create destroy]
+  end
 
   root 'pages#index'
 end

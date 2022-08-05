@@ -1,5 +1,6 @@
-<h1 class="mb-4">Изменить вопрос</h1>
+<% provide :page_title, 'Изменить вопрос' %>
+<% currently_at 'Questions' %>
 
-<%= @question.inspect %>
+<h1 class="mb-4">Изменить вопрос</h1>
 
 <%= render 'form' %>

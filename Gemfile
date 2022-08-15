@@ -7,6 +7,7 @@ ruby '3.1.2'
 gem 'bcrypt'
 gem 'bootsnap', require: false
 gem 'cssbundling-rails'
+gem 'draper'
 gem 'image_processing'
 gem 'jbuilder'
 gem 'jsbundling-rails'

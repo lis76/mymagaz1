@@ -2,13 +2,14 @@
 
 # This shiny device polishes bared Answers
 class AnswersController < ApplicationController
+  include ActionView::RecordIdentifier
   before_action :set_question!
   before_action :set_answer!, except: :create
 
   def update
     if @answer.update answer_params
       flash[:success] = 'Ответ обновлен!!'
-      redirect_to question_path(@question)
+      redirect_to question_path(@question, anchor: dom_id(@answer))
     else
       render :edit
     end
